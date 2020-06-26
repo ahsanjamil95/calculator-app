@@ -3,10 +3,75 @@
 <head>
 <meta charset="utf-8">
 <title>Calculator</title>
-	<script src="app.js"></script>
+<script src="app.js"></script>
+<link rel="stylesheet" type="text/css" href="mdb.min.css"/>
+	<style>
+		.con_g{
+			-webkit-box-shadow: 0px 0px 53px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 53px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 53px 0px rgba(0,0,0,0.75);
+			background-color: black;
+			
+		}
+		.cnb{
+			margin-right: 105px;
+			width: 90px;
+		}
+	</style>
 </head>
-
+	<div class="container mt-5" style="width: 30%">
+<select class="form-control form-control-sm" id="exampleFormControlSelect1" onchange="change(this)">
+      <option>Choose Color</option>
+      <option value="black">Dark</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+	  <option value="deepskyblue">Sky</option>
+	  <option value="blue">Blue</option>
+	
+      <option value="deeppink">Deeppink</option>
+	  <option value="chocolate">Chocolate</option>
+    </select>
+		</div> 
+<div class="container-fluid mt-5" style="width: 360px;">
+  <div class="container con_g" id="nav"> 
+    <form class="p-3">
+      <h3 class="text-light text-center mb-3">Calculator</h3>
+      <input type="text" class="form-control bg-light" disabled/>
+      <div class="mt-3">
+      <button type="button" class="btn btn-danger btn-rounded btn-lg my-2 cnb">&#x2201;</button>
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">&#xf7;</button>
+		
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">7</button>
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">8</button>
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">9</button>
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">&#xd7;</button>
+		
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">4</button>
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">5</button>
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">6</button>
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">&#x2212;</button>
+		
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">1</button>
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">2</button>
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">3</button>
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">&#x2b;</button>
+		
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">%</button>
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">0</button>
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">.</button>
+      <button type="button" class="btn btn-light btn-rounded btn-lg my-2">&#x3d;</button>
+		  </div>
+    </form>
+  </div>
+</div>
 <body>
 </body>
 </html>
- 
+<script>
+function change(x){
+        var nav=document.getElementById('nav')
+        nav.style.backgroundColor=x.value;
+		
+        
+   	}
+</script>
